@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgb(187, 146, 225);
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            background-color: white;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header h1 {
+            margin-top: 0px;
+        }
+
+        main {
+            background-color: white;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            width: 70vw;
+            height: 300px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TREINANDO DOM</h1>
+    </header>
+    <main>
+        <h1>Sistem de nacionalidade</h1>
+        Digite o seu país de origem: <input type="text" name="pais" id="ipais">
+        <input type="button" value="Verificar" onclick="clicar()">
+        <div class="res">
+    </main>
+
+    </div>
+    <script>
+        function clicar(){
+            var pais = window.document.getElementById('ipais');
+            var resp = window.document.getElementsByClassName('res')[0]
+            var pais2 = pais.value;
+            if (pais2 == 'Brasil' || pais2 == 'brasil'){
+                resp.innerHTML = `<p>Você é do país <strong>${pais2.toUpperCase()}</strong> portanto você é <strong>BRASILEIRO</strong></p>`
+            }
+            else {
+                resp.innerHTML = `<p>Você é do país <strong>${pais2.toUpperCase()}</strong> portanto você é  <strong>ESTRANGEIRO</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
